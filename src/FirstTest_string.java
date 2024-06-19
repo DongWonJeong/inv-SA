@@ -35,7 +35,7 @@ public class FirstTest_string {
 
             for (int i = 0; i < user.length; i++) {
                 // 입력을 문자열 배열로 변환
-                user[i] = Integer.toString(userInput.charAt(i));
+                user[i] = Character.toString(userInput.charAt(i));
             }
 
             int strike = 0;
