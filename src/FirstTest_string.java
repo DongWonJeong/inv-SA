@@ -53,16 +53,13 @@ public class FirstTest_string {
                     }
                 }
             }
-            System.out.println(ball + "B" + strike + "S");
-
             // 3S일 때 프로그램 종료
             if (strike == 3) {
                 System.out.println(strike + "S");
                 System.out.println(number + "번 만에 게임을 종료합니다.");
                 break;
             }
+            System.out.println(ball + "B" + strike + "S");
         }
-
-        input.close();
     }
 }
