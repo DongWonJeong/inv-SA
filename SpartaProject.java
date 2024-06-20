@@ -1,4 +1,4 @@
-package code;
+package sparta;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -8,6 +8,7 @@ public class SpartaProject {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!");
         //랜덤 숫자 3가지 뽑기   + 숫자 중복 없애기 //i(0),i(1)j(0),i(2)j(0,1),i(3)j(0,1,2)이런식으로 비교해서 중복 없게 하는..
         int [] numbers = new int[3];  //숫자3칸
 
@@ -22,17 +23,15 @@ public class SpartaProject {
                 }
             }
         }
-        System.out.println("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!");
 
-        System.out.println("숫자를 입력하세요:");
-        int count = 1; //시도횟수
+        int count = 1;//시도횟수
 
         while (true) {
+            System.out.print(count + "번째 시도:" + " ");
             String userInput = scanner.nextLine();
 
             //사용자가 입력한 값이 3자리가 맞는지 OR 숫자만 쳤는지
             if (userInput.length() == 3) {
-
                 count++;
             } else {
                 System.out.println("숫자 3개를 입려하세요:");
@@ -59,14 +58,14 @@ public class SpartaProject {
                     }
                 }
             }
-            System.out.println(count + "번째 시도: " + userInput);
-            System.out.println(strike + "S " + ball + "B");
             //모든 숫자와 위치가 맞으면 종료
             if (strike == 3 ) {
-                System.out.println(count + "번만에 맞히셨습니다.");
+                System.out.println(strike + "S");
+                System.out.println((count-1) + "번만에 맞히셨습니다.");
                 System.out.println("게임을 종료합니다.");
                 break;
             }
+            System.out.println(strike + "S " + ball + "B");
         }
     }
 }
